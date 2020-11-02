@@ -1,0 +1,124 @@
+.header {
+  margin: 30px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: minmax(160px, auto) minmax(auto, 600px) minmax(280px, auto);
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 40px;
+}
+
+@media (max-width: 800px) {
+  .header {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
+
+.busca form {
+  display: grid;
+}
+
+.busca #s {
+  border: 3px solid #000;
+  font-size: 1.125rem;
+  border-radius: 4px;
+  padding: 12px 40px 12px 20px;
+  font-family:  'Righteous', cursive;
+  grid-area: 1/1;
+}
+
+.busca #searchbutton {
+  grid-area: 1/1;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+  justify-self: end;
+  text-indent: -100px;
+  background: transparent url('../img/icons/search.svg') no-repeat center center;
+}
+
+.conta {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto;
+}
+
+@media (max-width: 800px) {
+  .conta {
+    grid-gap: 40px;
+    justify-content: start;
+  }
+}
+
+.conta .minha-conta,
+.conta .carrinho {
+  padding: 5px 0px 5px 34px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  font-family:  'Righteous', cursive;
+}
+
+.conta .carrinho {
+  background-image: url('../img/icons/cart.svg');
+  position: relative;
+}
+
+.conta .minha-conta {
+  background-image: url('../img/icons/user.svg');
+}
+
+.carrinho-count {
+  display: block;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background: #84CDF6;
+  font-size: .7rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  position: absolute;
+  top: 0px;
+  left: 5px;
+}
+
+.menu-categorias {
+  background: #000;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.menu-categorias ul {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-categorias ul li {
+  margin: 15px 10px;
+}
+
+.menu-categorias a {
+  color: #FFF;
+  font-family:  'Righteous', cursive;
+  padding: 10px;
+}
+
+.menu-categorias a:hover,
+.menu-categorias .current-menu-item a {
+  color: #84CDF6;
+}
+
+@media (max-width: 800px) {
+  .menu-categorias {
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .menu-categorias ul {
+    justify-content: initial
+  }
+}
